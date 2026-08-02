@@ -25,6 +25,11 @@ const stream = {
   multiplex: "none",
 };
 
+const ech = {
+  ech_enable: false,
+  ech_server_name: null,
+};
+
 const reality = {
   reality_server_addr: null,
   reality_server_port: null,
@@ -54,6 +59,7 @@ export function getProtocolDefaultConfig(proto: ProtocolType) {
         ...stream,
         ...certificate,
         ...reality,
+        ...ech,
         type: "vmess",
         security: "none",
       } as any;
@@ -63,6 +69,7 @@ export function getProtocolDefaultConfig(proto: ProtocolType) {
         ...stream,
         ...certificate,
         ...reality,
+        ...ech,
         type: "vless",
         security: "none",
         flow: "none",
@@ -81,6 +88,7 @@ export function getProtocolDefaultConfig(proto: ProtocolType) {
         ...stream,
         ...certificate,
         ...reality,
+        ...ech,
         type: "trojan",
         security: "tls",
         cert_mode: "self",
@@ -89,6 +97,7 @@ export function getProtocolDefaultConfig(proto: ProtocolType) {
       return {
         ...base,
         ...certificate,
+        ...ech,
         type: "hysteria2",
         security: "tls",
         obfs: "none",
@@ -101,6 +110,7 @@ export function getProtocolDefaultConfig(proto: ProtocolType) {
       return {
         ...base,
         ...certificate,
+        ...ech,
         type: "tuic",
         version: 5,
         security: "tls",
@@ -116,16 +126,17 @@ export function getProtocolDefaultConfig(proto: ProtocolType) {
         ...base,
         ...certificate,
         ...reality,
+        ...ech,
         type: "anytls",
         security: "tls",
         padding_scheme: null,
-        multiplex: "none",
         cert_mode: "self",
       } as any;
     case "naive":
       return {
         ...base,
         ...certificate,
+        ...ech,
         type: "naive",
         security: "tls",
         network: "tcp,udp",
@@ -159,9 +170,7 @@ export function getProtocolDefaultConfig(proto: ProtocolType) {
         type: "snell",
         version: 5,
         mode: "default",
-        server_key: null,
         obfs: "none",
-        multiplex: "none",
       } as any;
     default:
       return {} as any;

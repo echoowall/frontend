@@ -177,7 +177,8 @@ function DynamicField({
                               <DropdownMenuItem
                                 key={idx}
                                 onClick={async () => {
-                                  const result = await genFunc.function();
+                                  const result =
+                                    await genFunc.function(protocolData);
                                   if (typeof result === "string") {
                                     fieldProps.onChange(result);
                                   } else if (field.generate!.updateFields) {
@@ -203,7 +204,8 @@ function DynamicField({
                       ) : field.generate.function ? (
                         <Button
                           onClick={async () => {
-                            const result = await field.generate!.function!();
+                            const result =
+                              await field.generate!.function!(protocolData);
                             if (typeof result === "string") {
                               fieldProps.onChange(result);
                             } else if (field.generate!.updateFields) {
