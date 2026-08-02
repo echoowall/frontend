@@ -19,6 +19,12 @@ This document records all notable changes to ShadCN Admin.
 ---
 
 
+## [1.14.0-dev.1](https://github.com/perfect-panel/frontend/compare/v1.13.1...v1.14.0-dev.1) (2026-08-02)
+
+### ✨ Features / 新功能
+
+* align server protocol, telegram and oauth with the panel ([e7d9250](https://github.com/perfect-panel/frontend/commit/e7d92509285e6ca29284e14eaf432f7268ed8381))
+
 ## [1.13.1](https://github.com/perfect-panel/frontend/compare/v1.13.0...v1.13.1) (2026-08-02)
 
 ### 🐛 Bug Fixes / 问题修复
