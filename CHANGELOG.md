@@ -19,6 +19,12 @@ This document records all notable changes to ShadCN Admin.
 ---
 
 
+## [1.14.0-dev.2](https://github.com/perfect-panel/frontend/compare/v1.14.0-dev.1...v1.14.0-dev.2) (2026-08-02)
+
+### 🐛 Bug Fixes / 问题修复
+
+* stop rewriting the transport of a stored reality node ([883fc84](https://github.com/perfect-panel/frontend/commit/883fc84e5e9e2b468f219f7baefdbb94228e5e22))
+
 ## [1.14.0-dev.1](https://github.com/perfect-panel/frontend/compare/v1.13.1...v1.14.0-dev.1) (2026-08-02)
 
 ### ✨ Features / 新功能
